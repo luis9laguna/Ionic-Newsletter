@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <app-news *ngIf="dataLocalService.allNews.length > 0" [localFavs]="true" [news]="dataLocalService.allNews"></app-news>
+
+  <ion-slides *ngIf="dataLocalService.allNews.length === 0">
+    <ion-slide>
+      <ion-label>You dont have any news yet</ion-label>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
